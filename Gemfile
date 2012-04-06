@@ -1,12 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
-
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'pg'
-
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -42,10 +37,13 @@ gem 'refinerycms', '~> 2.0.0'
 
 # Specify additional Refinery CMS Extensions here (all optional):
 gem 'refinerycms-i18n', '~> 2.0.0'
-#  gem 'refinerycms-blog', '~> 2.0.0'
-#  gem 'refinerycms-inquiries', '~> 2.0.0'
+gem 'refinerycms-blog', '~> 2.0.0'
+gem 'refinerycms-inquiries', '~> 2.0.0'
 #  gem 'refinerycms-search', '~> 2.0.0'
 #  gem 'refinerycms-page-images', '~> 2.0.0'
+
+# Add postgres support
+gem 'pg'
 
 # The Heroku gem allows you to interface with Heroku's API
 gem 'heroku'
