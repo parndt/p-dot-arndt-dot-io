@@ -4,14 +4,24 @@ $aside_text: #999;
 $label_text: #666;
 
 $header_height: 10em;
-$body_width: 70%;
+$body_width: 0.7;
 $min_width: 920px;
 
 $fancy_font: 'Francois One', sans-serif;
 
+@mixin page_layout {
+  min-width: $min_width * $body_width;
+  margin-left: 100% * (1 - $body_width);
+}
+
+@mixin page_text {
+  text-shadow: 0 1px 0 white;
+}
+
 body {
   background: $pale;
   padding-bottom: $header_height;
+
   .forkme {
     img {
       position: absolute;
@@ -70,7 +80,7 @@ header {
     text-transform: uppercase;
     font-size: 8em;
     line-height: 1em;
-    width: $body_width;
+    width: 100% * $body_width;
     white-space: nowrap;
 
     a {
@@ -108,11 +118,10 @@ header {
   }
 }
 
-#page, footer {
+#page {
+  @include page_layout;
+  @include page_text;
   position: relative;
-  min-width: $min_width * 0.7;
-  margin-left: 100% - $body_width;
-  text-shadow: 0 1px 0 white;
 }
 
 #side_body {
@@ -126,6 +135,8 @@ header {
 }
 
 footer {
+  @include page_layout;
+  @include page_text;
   margin-top: 3em;
   border-top: 1px solid #ccc;
   padding-top: 0.75em;
