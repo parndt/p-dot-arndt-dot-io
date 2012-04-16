@@ -2,8 +2,6 @@ $primary: #ff5800;
 $pale: #f2f2f2;
 $aside_text: #999;
 $label_text: #666;
-$button_shadow: rgba(0, 0, 0, 0.5);
-$button_glow: rgba(255, 255, 255, 0.5);
 
 $header_height: 10em;
 $body_width: 70%;
@@ -166,9 +164,12 @@ footer {
     margin-left: $label_width;
 
     input {
+      $button_glow: rgba(255, 255, 255, 0.5);
       $button_edge: darken($primary, 25.1%);
+      $button_shadow: rgba(0, 0, 0, 0.5);
       $button_depth: 0.25em;
       $button_travel: 0.2em;
+      $bottom_margin: 1em;
 
       background: $primary;
       border: 1px solid $primary;
@@ -180,7 +181,7 @@ footer {
       font-size: 1.5em;
       font-weight: bold;
       line-height: 1;
-      margin-bottom: 1em;
+      margin-bottom: $bottom_margin;
       padding: 8px 1em 10px;
       text-align: center;
       text-shadow: 0px -1px 1px #1e2d4d;
@@ -198,6 +199,7 @@ footer {
                     0 $button_depth - $button_travel 0px $button_edge,
                     0 $button_depth - $button_travel 0.05em $button_shadow;
         margin-top: $button_travel;
+        margin-bottom: $bottom_margin - $button_travel;
       }
     }
   }
