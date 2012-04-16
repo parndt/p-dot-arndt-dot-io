@@ -7,6 +7,7 @@ $button_glow: rgba(255, 255, 255, 0.5);
 
 $header_height: 10em;
 $body_width: 70%;
+$min_width: 920px;
 
 $fancy_font: 'Francois One', sans-serif;
 
@@ -111,6 +112,7 @@ header {
 
 #page, footer {
   position: relative;
+  min-width: $min_width * 0.7;
   margin-left: 100% - $body_width;
   text-shadow: 0 1px 0 white;
 }
