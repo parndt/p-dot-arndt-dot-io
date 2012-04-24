@@ -53,7 +53,7 @@ body {
         }
       }
     }
-    :hover span {
+    &:hover span {
       &:first-child {
         opacity: 0;
       }
