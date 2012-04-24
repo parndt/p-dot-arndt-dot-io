@@ -33,6 +33,7 @@ body {
     width: 250px;
     @include rotate(-45deg);
     span {
+      cursor: pointer;
       background: $primary;
       color: white;
       font-weight: bold;
