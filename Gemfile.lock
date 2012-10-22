@@ -110,6 +110,7 @@ GEM
     net-ssh (2.6.0)
       jruby-pageant (>= 1.1.1)
     netrc (0.7.7)
+    newrelic_rpm (3.4.0)
     nokogiri (1.5.5)
     orm_adapter (0.0.7)
     paper_trail (2.6.3)
@@ -240,6 +241,7 @@ DEPENDENCIES
   fog
   heroku
   jquery-rails
+  newrelic_rpm
   pg
   refinerycms (~> 2.0.4)
   refinerycms-blog (~> 2.0.0)
