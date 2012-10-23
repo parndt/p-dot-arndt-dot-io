@@ -31,7 +31,6 @@ GEM
     acts-as-taggable-on (2.3.3)
       rails (~> 3.0)
     acts_as_indexed (0.7.8)
-    addressable (2.3.2)
     arel (3.0.2)
     awesome_nested_set (2.1.5)
       activerecord (>= 3.0.0)
@@ -81,14 +80,6 @@ GEM
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
       paper_trail (~> 2)
-    heroku (2.32.11)
-      heroku-api (~> 0.3.5)
-      launchy (>= 0.3.2)
-      netrc (~> 0.7.7)
-      rest-client (~> 1.6.1)
-      rubyzip
-    heroku-api (0.3.5)
-      excon (~> 0.16.1)
     hike (1.2.1)
     i18n (0.6.1)
     journey (1.0.4)
@@ -97,8 +88,6 @@ GEM
       thor (~> 0.14)
     jruby-pageant (1.1.1)
     json (1.7.5)
-    launchy (2.1.2)
-      addressable (~> 2.3)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -109,7 +98,6 @@ GEM
       net-ssh (>= 1.99.1)
     net-ssh (2.6.0)
       jruby-pageant (>= 1.1.1)
-    netrc (0.7.7)
     newrelic_rpm (3.4.0)
     nokogiri (1.5.5)
     orm_adapter (0.0.7)
@@ -200,12 +188,9 @@ GEM
       refinerycms-core (= 2.0.8)
     refinerycms-settings (2.0.2)
       refinerycms-core (~> 2.0.1)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
     routing-filter (0.3.1)
       actionpack
     ruby-hmac (0.4.0)
-    rubyzip (0.9.9)
     sass (3.2.1)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -239,7 +224,6 @@ DEPENDENCIES
   compass
   compass-rails
   fog
-  heroku
   jquery-rails
   newrelic_rpm
   pg

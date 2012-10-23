@@ -51,8 +51,5 @@ gem 'refinerycms-inquiries', '~> 2.0.0'
 # Add postgres support
 gem 'pg'
 
-# The Heroku gem allows you to interface with Heroku's API
-gem 'heroku'
-
 # Fog allows you to use S3 assets (added for Heroku)
 gem 'fog'
