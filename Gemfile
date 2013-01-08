@@ -39,7 +39,7 @@ end
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 # Refinery CMS
-gem 'refinerycms', '~> 2.0.4'
+gem 'refinerycms', :git => 'git://github.com/refinery/refinerycms.git', :branch => '2-0-stable'
 
 # Specify additional Refinery CMS Extensions here (all optional):
 gem 'refinerycms-i18n', '~> 2.0.0'
