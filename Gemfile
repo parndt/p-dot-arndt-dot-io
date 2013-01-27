@@ -39,12 +39,13 @@ end
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 # Refinery CMS
-gem 'refinerycms', :git => 'git://github.com/refinery/refinerycms.git', :branch => '2-0-stable'
+gem 'refinerycms', :github => 'refinery/refinerycms'
 
 # Specify additional Refinery CMS Extensions here (all optional):
-gem 'refinerycms-i18n', '~> 2.0.0'
-gem 'refinerycms-blog', '~> 2.0.0'
-gem 'refinerycms-inquiries', '~> 2.0.0'
+gem 'refinerycms-i18n', :github => 'refinery/refinerycms-i18n'
+gem 'refinerycms-blog', :github => 'refinery/refinerycms-blog'
+gem 'refinerycms-inquiries', :github => 'refinery/refinerycms-inquiries'
+gem 'refinerycms-settings', :github => 'refinery/refinerycms-settings'
 #  gem 'refinerycms-search', '~> 2.0.0'
 #  gem 'refinerycms-page-images', '~> 2.0.0'
 
@@ -53,3 +54,9 @@ gem 'pg'
 
 # Fog allows you to use S3 assets (added for Heroku)
 gem 'fog'
+
+group :test do
+  gem 'refinerycms-testing', :github => 'refinery/refinerycms'
+  gem 'generator_spec'
+  gem 'rspec-rails'
+end
