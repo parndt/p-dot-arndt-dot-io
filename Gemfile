@@ -48,6 +48,7 @@ gem 'refinerycms-i18n', :github => 'refinery/refinerycms-i18n'
 gem 'refinerycms-blog', :github => 'refinery/refinerycms-blog'
 gem 'refinerycms-inquiries', :github => 'refinery/refinerycms-inquiries'
 gem 'refinerycms-settings', :github => 'refinery/refinerycms-settings'
+gem 'refinerycms-acts-as-indexed', :github => 'refinery/refinerycms-acts-as-indexed'
 #  gem 'refinerycms-search', '~> 2.0.0'
 #  gem 'refinerycms-page-images', '~> 2.0.0'
 
