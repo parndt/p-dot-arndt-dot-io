@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '1.9.3'
+ruby '1.9.3', engine: 'jruby', engine_version: '1.7.3'
+
+gem 'puma'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -53,10 +55,15 @@ gem 'refinerycms-acts-as-indexed', :github => 'refinery/refinerycms-acts-as-inde
 #  gem 'refinerycms-page-images', '~> 2.0.0'
 
 # Add postgres support
-gem 'pg'
+gem 'activerecord-jdbcpostgresql-adapter', :platform => :jruby
+gem 'pg', :platform => :ruby
 
 # Fog allows you to use S3 assets (added for Heroku)
 gem 'fog'
+
+group :development do
+  gem 'quiet_assets'
+end
 
 group :test do
   gem 'refinerycms-testing', :github => 'refinery/refinerycms'
