@@ -43,12 +43,20 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $fancy_font;
   line-height: 1;
 }
-
+a {
+  color: $primary;
+}
 h1 {
   font-size: 2em;
   margin: 1em 0 0.5em;
   text-transform: uppercase;
   color: $primary;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline
+    }
+  }
 }
 
 h2 {
@@ -76,8 +84,9 @@ header {
     white-space: nowrap;
 
     a {
-      color: $primary;
-      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 
