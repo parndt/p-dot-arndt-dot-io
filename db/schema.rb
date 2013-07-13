@@ -11,13 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130127205525) do
+ActiveRecord::Schema.define(:version => 20130713164126) do
 
   create_table "refinery_blog_categories", :force => true do |t|
     t.string   "title"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-    t.string   "cached_slug"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.string   "slug"
   end
 
@@ -30,6 +29,18 @@ ActiveRecord::Schema.define(:version => 20130127205525) do
   end
 
   add_index "refinery_blog_categories_blog_posts", ["blog_category_id", "blog_post_id"], :name => "index_blog_categories_blog_posts_on_bc_and_bp"
+
+  create_table "refinery_blog_category_translations", :force => true do |t|
+    t.integer  "refinery_blog_category_id"
+    t.string   "locale"
+    t.string   "title"
+    t.string   "slug"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
+
+  add_index "refinery_blog_category_translations", ["locale"], :name => "index_refinery_blog_category_translations_on_locale"
+  add_index "refinery_blog_category_translations", ["refinery_blog_category_id"], :name => "index_a0315945e6213bbe0610724da0ee2de681b77c31"
 
   create_table "refinery_blog_comments", :force => true do |t|
     t.integer  "blog_post_id"
@@ -44,6 +55,21 @@ ActiveRecord::Schema.define(:version => 20130127205525) do
 
   add_index "refinery_blog_comments", ["id"], :name => "index_refinery_blog_comments_on_id"
 
+  create_table "refinery_blog_post_translations", :force => true do |t|
+    t.integer  "refinery_blog_post_id"
+    t.string   "locale"
+    t.text     "body"
+    t.text     "custom_teaser"
+    t.string   "custom_url"
+    t.string   "slug"
+    t.string   "title"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+  end
+
+  add_index "refinery_blog_post_translations", ["locale"], :name => "index_refinery_blog_post_translations_on_locale"
+  add_index "refinery_blog_post_translations", ["refinery_blog_post_id"], :name => "index_refinery_blog_post_translations_on_refinery_blog_post_id"
+
   create_table "refinery_blog_posts", :force => true do |t|
     t.string   "title"
     t.text     "body"
@@ -52,7 +78,6 @@ ActiveRecord::Schema.define(:version => 20130127205525) do
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
     t.integer  "user_id"
-    t.string   "cached_slug"
     t.string   "custom_url"
     t.text     "custom_teaser"
     t.string   "source_url"
@@ -181,6 +206,7 @@ ActiveRecord::Schema.define(:version => 20130127205525) do
     t.string   "form_value_type"
     t.datetime "created_at",                         :null => false
     t.datetime "updated_at",                         :null => false
+    t.string   "slug"
   end
 
   add_index "refinery_settings", ["name"], :name => "index_refinery_settings_on_name"
