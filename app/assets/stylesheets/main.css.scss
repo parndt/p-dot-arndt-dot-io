@@ -23,6 +23,62 @@ $fancy_font: 'Francois One', sans-serif;
 body {
   background: $pale;
   padding-bottom: $header_height;
+  #page_container {
+    > header {
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: $header_height;
+      background: rgba(0, 0, 0, 0.9);
+      color: $pale;
+
+      h1 {
+        float: right;
+        margin: 0.125em 0;
+        text-transform: uppercase;
+        font-size: 8em;
+        line-height: 1em;
+        width: 100% * $body_width;
+        white-space: nowrap;
+
+        a {
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      nav {
+        float: right;
+        border-right: 1px solid white;
+        margin: 1em;
+        padding: 0.5em 1em;
+
+        ul {
+          margin: 0;
+          padding: 0;
+
+          li {
+            display: block;
+            list-style-type: none;
+            text-align: right;
+            font-size: 1.25em;
+            line-height: 1.375em;
+            vertical-align: middle;
+
+            a {
+              color: white;
+              text-decoration: none;
+              font-family: $fancy_font;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 body, input, textarea, select, td {
@@ -64,61 +120,6 @@ h2 {
   margin-bottom: 0.333333em;
 }
 
-header {
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: $header_height;
-  background: rgba(0, 0, 0, 0.9);
-  color: $pale;
-
-  h1 {
-    float: right;
-    margin: 0.125em 0;
-    text-transform: uppercase;
-    font-size: 8em;
-    line-height: 1em;
-    width: 100% * $body_width;
-    white-space: nowrap;
-
-    a {
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-
-  nav {
-    float: right;
-    border-right: 1px solid white;
-    margin: 1em;
-    padding: 0.5em 1em;
-
-    ul {
-      margin: 0;
-      padding: 0;
-
-      li {
-        display: block;
-        list-style-type: none;
-        text-align: right;
-        font-size: 1.25em;
-        line-height: 1.375em;
-        vertical-align: middle;
-
-        a {
-          color: white;
-          text-decoration: none;
-          font-family: $fancy_font;
-          text-transform: uppercase;
-        }
-      }
-    }
-  }
-}
-
 #page {
   @include page_layout;
   @include page_text;
@@ -132,15 +133,6 @@ header {
   width: 10em;
   padding: 0 1em;
   text-align: right;
-  color: $aside_text;
-}
-
-footer {
-  @include page_layout;
-  @include page_text;
-  margin-top: 3em;
-  border-top: 1px solid #ccc;
-  padding-top: 0.75em;
   color: $aside_text;
 }
 
