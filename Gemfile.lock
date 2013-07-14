@@ -1,6 +1,7 @@
 GIT
   remote: git://github.com/refinery/refinerycms-acts-as-indexed.git
   revision: 45644fc464949489a9d15d3ff7eba2fb0a0b082e
+  branch: master
   specs:
     refinerycms-acts-as-indexed (1.0.0)
       acts_as_indexed (~> 0.8.0)
@@ -8,7 +9,8 @@ GIT
 
 GIT
   remote: git://github.com/refinery/refinerycms-blog.git
-  revision: 6c14fbc20c8dece121b7569b7a5a0bd3c497fd57
+  revision: b9ab06148f249b7968428700d9e4490c478cbd54
+  branch: master
   specs:
     refinerycms-blog (2.1.0.dev)
       acts-as-taggable-on
@@ -22,6 +24,7 @@ GIT
 GIT
   remote: git://github.com/refinery/refinerycms-i18n.git
   revision: 3a7b6fad4d94af4dc45c5c0d89e3d14849340439
+  branch: master
   specs:
     refinerycms-i18n (2.1.0)
       rails-i18n (~> 0.7.3)
@@ -30,6 +33,7 @@ GIT
 GIT
   remote: git://github.com/refinery/refinerycms-inquiries.git
   revision: 2c8d8363dfdab1a95a7c2012d70503c71d68badd
+  branch: master
   specs:
     refinerycms-inquiries (2.1.0.dev)
       filters_spam (~> 0.2)
@@ -39,27 +43,29 @@ GIT
 GIT
   remote: git://github.com/refinery/refinerycms-settings.git
   revision: abf2382352f51e15c5377e34ca5fcff6ed40a0fd
+  branch: master
   specs:
     refinerycms-settings (2.1.0.dev)
       refinerycms-core (~> 2.1.0.dev)
 
 GIT
-  remote: git://github.com/refinery/refinerycms.git
-  revision: 53fd350e7d787ca306e516b0d32fde2243815109
+  remote: https://github.com/refinery/refinerycms.git
+  revision: 10c4a5f74d60bfcd8418981b7fffaaf2fcbd3ab8
+  branch: master
   specs:
-    refinerycms (2.1.0.dev)
+    refinerycms (2.1.0)
       bundler (>= 1.2.2, < 2.0)
-      refinerycms-authentication (= 2.1.0.dev)
-      refinerycms-core (= 2.1.0.dev)
-      refinerycms-dashboard (= 2.1.0.dev)
-      refinerycms-images (= 2.1.0.dev)
-      refinerycms-pages (= 2.1.0.dev)
-      refinerycms-resources (= 2.1.0.dev)
-    refinerycms-authentication (2.1.0.dev)
+      refinerycms-authentication (= 2.1.0)
+      refinerycms-core (= 2.1.0)
+      refinerycms-dashboard (= 2.1.0)
+      refinerycms-images (= 2.1.0)
+      refinerycms-pages (= 2.1.0)
+      refinerycms-resources (= 2.1.0)
+    refinerycms-authentication (2.1.0)
       actionmailer (>= 3.1.3, < 3.3)
       devise (~> 2.2.3)
-      refinerycms-core (= 2.1.0.dev)
-    refinerycms-core (2.1.0.dev)
+      refinerycms-core (= 2.1.0)
+    refinerycms-core (2.1.0)
       actionpack (>= 3.1.11, < 3.3, != 3.2.9, != 3.2.8, != 3.2.7, != 3.2.6, != 3.2.5, != 3.2.4, != 3.2.3, != 3.2.2, != 3.2.11, != 3.2.10, != 3.2.1, != 3.2.0)
       activerecord (>= 3.1.11, < 3.3, != 3.2.9, != 3.2.8, != 3.2.7, != 3.2.6, != 3.2.5, != 3.2.4, != 3.2.3, != 3.2.2, != 3.2.11, != 3.2.10, != 3.2.1, != 3.2.0)
       awesome_nested_set (~> 2.1.3)
@@ -70,27 +76,27 @@ GIT
       sass-rails (~> 3.2.3)
       truncate_html (~> 0.9)
       will_paginate (~> 3.0.2)
-    refinerycms-dashboard (2.1.0.dev)
-      refinerycms-core (= 2.1.0.dev)
-    refinerycms-images (2.1.0.dev)
+    refinerycms-dashboard (2.1.0)
+      refinerycms-core (= 2.1.0)
+    refinerycms-images (2.1.0)
       dragonfly (~> 0.9.14)
-      refinerycms-core (= 2.1.0.dev)
-    refinerycms-pages (2.1.0.dev)
+      refinerycms-core (= 2.1.0)
+    refinerycms-pages (2.1.0)
       awesome_nested_set (~> 2.1.3)
       babosa (!= 0.3.6)
       friendly_id (~> 4.0.9)
       globalize3 (~> 0.3.0)
-      refinerycms-core (= 2.1.0.dev)
+      refinerycms-core (= 2.1.0)
       seo_meta (~> 1.4.0)
-    refinerycms-resources (2.1.0.dev)
+    refinerycms-resources (2.1.0)
       acts_as_indexed (~> 0.8.0)
       dragonfly (~> 0.9.12)
-      refinerycms-core (= 2.1.0.dev)
-    refinerycms-testing (2.1.0.dev)
+      refinerycms-core (= 2.1.0)
+    refinerycms-testing (2.1.0)
       capybara (~> 2.1.0)
       database_cleaner (~> 1.0.1)
       factory_girl_rails (~> 4.2.1)
-      refinerycms-core (= 2.1.0.dev)
+      refinerycms-core (= 2.1.0)
       rspec-rails (~> 2.13)
       selenium-webdriver (~> 2.33.0)
 
@@ -147,6 +153,7 @@ GEM
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)
     chunky_png (1.2.8)
+    coderay (1.0.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -216,6 +223,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    method_source (0.8.1)
     mime-types (1.23)
     mini_portile (0.5.1)
     multi_json (1.7.7)
@@ -233,6 +241,12 @@ GEM
       railties (~> 3.0)
     pg (0.15.1)
     polyglot (0.3.3)
+    pry (0.9.12.2)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+    pry-nav (0.2.3)
+      pry (~> 0.9.10)
     puma (2.3.2)
       rack (>= 1.1, < 2.0)
     puma (2.3.2-java)
@@ -270,7 +284,7 @@ GEM
       json (~> 1.4)
     routing-filter (0.3.1)
       actionpack
-    rspec-core (2.14.2)
+    rspec-core (2.14.3)
     rspec-expectations (2.14.0)
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-mocks (2.14.1)
@@ -295,6 +309,7 @@ GEM
       websocket (~> 1.0.4)
     seo_meta (1.4.0)
       railties (>= 3.0.0)
+    slop (3.4.5)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -331,6 +346,8 @@ DEPENDENCIES
   jquery-rails
   newrelic_rpm
   pg
+  pry
+  pry-nav
   puma
   quiet_assets
   refinerycms!
