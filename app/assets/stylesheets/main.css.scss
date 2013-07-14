@@ -53,8 +53,9 @@ body {
       nav {
         float: right;
         border-right: 1px solid white;
-        margin: 1em;
+        margin: 0 1em;
         padding: 0.5em 1em;
+        height: $header_height;
 
         ul {
           margin: 0;
