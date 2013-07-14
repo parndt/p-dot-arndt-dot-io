@@ -54,3 +54,7 @@ group :development, :test do
   gem 'pry'
   gem 'pry-nav'
 end
+
+gem 'haml'
+gem 'bourbon'
+gem 'neat'
