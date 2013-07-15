@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: git://github.com/refinery/refinerycms-blog.git
-  revision: 7b23a4c4c8f560262a70464e86923384202b8b53
+  revision: 091b3a401b20590a0fde3cb04d0864c953c91a7c
   branch: master
   specs:
     refinerycms-blog (2.1.0.dev)

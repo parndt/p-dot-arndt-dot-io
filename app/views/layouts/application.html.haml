@@ -1,0 +1,10 @@
+!!! 5
+%html
+  %head
+    - content_for :stylesheets, stylesheet_link_tag("http://fonts.googleapis.com/css?family=Francois+One")
+    = render '/refinery/head'
+  %body
+    %header= render '/refinery/header'
+    = Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html
+    %section#page= yield
+    = render '/refinery/javascripts'

@@ -1,0 +1,20 @@
+- flash.each do |key, value|
+  #flash{class: "flash flash_#{key}"}= value
+%article#blog_post
+  %header
+    %h1= @post.title
+    %section.details
+      %time.posted_at{datetime: l(@post.published_at.to_date, :format => :default)
+        = t 'created_at', :scope => 'refinery.blog.shared.posts', :when => l(@post.published_at.to_date, :format => :long)
+      - if @post.source_url.present?
+        .blog_source
+          = "#{t('source', :scope => 'refinery.blog.posts.show')}: "
+          = link_to (@post.source_url_title.blank? ? @post.source_url : @post.source_url_title), @post.source_url
+
+      - if (categories = @post.categories).any?
+        %aside.filled_in
+          = t('filled_in', :scope => 'refinery.blog.posts.show')
+          = categories.each_with_index.map { |category, index| link_to category.title, refinery.blog_category_path(category) }.join(',')
+  = raw @post.body %>
+= render '/refinery/draft_page_message' unless @post.try(&:live?) -%>
+= render 'nav' if next_or_previous?(@post) %>

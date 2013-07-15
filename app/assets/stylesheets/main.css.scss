@@ -1,3 +1,5 @@
+@import "bourbon";
+@import "neat";
 @import "compass";
 
 $primary: #ff5800;
@@ -6,206 +8,22 @@ $aside_text: #999;
 $label_text: #666;
 
 $header_height: 10em;
-$body_width: 0.7;
-$min_width: 920px;
 
 $fancy_font: 'Francois One', sans-serif;
 
-@mixin page_layout {
-  min-width: $min_width * $body_width;
-  margin-left: 100% * (1 - $body_width);
-}
-
-@mixin page_text {
-  text-shadow: 0 1px 0 white;
-}
-
 body {
+  @include outer-container;
+}
+header {
+  img#picture { }
+  height: $header_height;
   background: $pale;
-  padding-bottom: $header_height;
-  #page_container {
-    > header {
-      position: fixed;
-      z-index: 1;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: $header_height;
-      background: rgba(0, 0, 0, 0.9);
-      color: $pale;
-
-      h1 {
-        float: right;
-        margin: 0.125em 0;
-        text-transform: uppercase;
-        font-size: 8em;
-        line-height: 1em;
-        width: 100% * $body_width;
-        white-space: nowrap;
-
-        a {
-          &:hover {
-            text-decoration: none;
-          }
-        }
-      }
-
-      nav {
-        float: right;
-        border-right: 1px solid white;
-        margin: 0 1em;
-        padding: 0.5em 1em;
-        height: $header_height;
-
-        ul {
-          margin: 0;
-          padding: 0;
-
-          li {
-            display: block;
-            list-style-type: none;
-            text-align: right;
-            font-size: 1.25em;
-            line-height: 1.375em;
-            vertical-align: middle;
-
-            a {
-              color: white;
-              text-decoration: none;
-              font-family: $fancy_font;
-              text-transform: uppercase;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-body, input, textarea, select, td {
-  font: 14px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
-}
-
-p, h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-}
-
-p {
-  margin-bottom: 0.75em;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: $fancy_font;
-  line-height: 1;
-}
-a {
-  color: $primary;
-}
-h1 {
-  font-size: 2em;
-  margin: 1em 0 0.5em;
-  text-transform: uppercase;
-  color: $primary;
-  a {
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline
-    }
-  }
-}
-
-h2 {
-  font-size: 1.5em;
-  margin-bottom: 0.333333em;
-}
-
-#page {
-  @include page_layout;
-  @include page_text;
   position: relative;
-}
-
-#side_body {
-  position: absolute;
-  left: -13em;
-  top: 3em;
-  width: 10em;
-  padding: 0 1em;
-  text-align: right;
-  color: $aside_text;
-}
-
-.inquiries form {
-  $label_width: 15%;
-
-  margin: 0 1em 1.5em -1em;
-  padding: 1em;
-  background: darken($pale, 1.5%);
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2), 0 1px 0 white;
-  border-radius: 0.5em;
-
-  .field {
-    margin: 0 0 0.5em;
-
-    label {
-      clear: left;
-      float: left;
-      width: $label_width;
-      text-transform: uppercase;
-      color: $label_text;
-      line-height: 2em;
-      vertical-align: middle;
-    }
-
-    input, textarea {
-      width: 100% - 2 * $label_width;
-      line-height: 1.5;
-    }
+  h1 {
+    @include span-columns(6 of 8);
   }
-
-  .actions {
-    margin-left: $label_width;
-
-    input {
-      $button_glow: rgba(255, 255, 255, 0.5);
-      $button_edge: darken($primary, 25.1%);
-      $button_shadow: rgba(0, 0, 0, 0.5);
-      $button_depth: 0.25em;
-      $button_travel: 0.2em;
-      $bottom_margin: 1em;
-
-      background: $primary;
-      border: 1px solid $primary;
-      border-radius: 4px;
-      box-shadow: inset 0 1px 10px 1px transparentize($button_glow, 0.1),
-                  0 $button_depth 0px $button_edge,
-                  0 $button_depth 0.5em $button_shadow;
-      color: #fff;
-      font-size: 1.5em;
-      font-weight: bold;
-      line-height: 1;
-      margin-bottom: $bottom_margin;
-      padding: 8px 1em 10px;
-      text-align: center;
-      text-shadow: 0px -1px 1px #1e2d4d;
-      -webkit-background-clip: padding-box;
-
-      &:hover {
-        box-shadow: inset 0 1px 20px 1px $button_glow,
-                    0 $button_depth 0px $button_edge,
-                    0 $button_depth 0.5em $button_shadow;
-        cursor: pointer;
-      }
-
-      &:active {
-        box-shadow: inset 0 1px 20px 1px $button_glow,
-                    0 $button_depth - $button_travel 0px $button_edge,
-                    0 $button_depth - $button_travel 0.05em $button_shadow;
-        margin-top: $button_travel;
-        margin-bottom: $bottom_margin - $button_travel;
-      }
-    }
+  nav {
+    @include span-columns(8 of 8);
   }
 }
+
