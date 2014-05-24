@@ -1,19 +1,15 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.1.2'
 
 gem 'puma'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+gem 'sass-rails',   '~> 4.0.0'
+gem 'coffee-rails', '~> 4.0.0'
 
-  gem 'uglifier', '>= 1.0.3'
-  gem 'compass'
-  gem 'compass-rails'
-end
+gem 'uglifier', '>= 1.0.3'
+gem 'compass'
+gem 'compass-rails'
 
 gem 'jquery-rails'
 
@@ -33,6 +29,7 @@ gem 'refinerycms-blog', github: 'refinery/refinerycms-blog', branch: 'master'
 gem 'refinerycms-inquiries', github: 'refinery/refinerycms-inquiries', branch: 'master'
 gem 'refinerycms-settings', github: 'refinery/refinerycms-settings', branch: 'master'
 gem 'refinerycms-acts-as-indexed', github: 'refinery/refinerycms-acts-as-indexed', branch: 'master'
+gem 'refinerycms-wymeditor', github: 'parndt/refinerycms-wymeditor', branch: 'take-2'
 
 # Add postgres support
 gem 'activerecord-jdbcpostgresql-adapter', platform: :jruby
