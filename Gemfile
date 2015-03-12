@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.5'
+ruby '2.2.1'
 
 gem 'puma'
 
@@ -24,19 +24,14 @@ git 'https://github.com/refinery/refinerycms.git', branch: 'master' do
 end
 
 # Specify additional Refinery CMS Extensions here (all optional):
-gem 'refinerycms-i18n', github: 'refinery/refinerycms-i18n', branch: 'master'
 gem 'refinerycms-blog', github: 'refinery/refinerycms-blog', branch: 'master'
 gem 'refinerycms-inquiries', github: 'refinery/refinerycms-inquiries', branch: 'master'
 gem 'refinerycms-settings', github: 'refinery/refinerycms-settings', branch: 'master'
-gem 'refinerycms-acts-as-indexed', github: 'refinery/refinerycms-acts-as-indexed', branch: 'master'
-gem 'refinerycms-wymeditor', github: 'parndt/refinerycms-wymeditor', branch: 'take-2'
+gem 'refinerycms-wymeditor', '~> 1.0'
 
 # Add postgres support
 gem 'activerecord-jdbcpostgresql-adapter', platform: :jruby
 gem 'pg', platform: :ruby
-
-# Fog allows you to use S3 assets (added for Heroku)
-gem 'fog'
 
 group :development do
   gem 'quiet_assets'
