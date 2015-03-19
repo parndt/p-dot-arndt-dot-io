@@ -36,7 +36,7 @@ GIT
 
 GIT
   remote: https://github.com/refinery/refinerycms.git
-  revision: a0d8052d487a77678cdf9230759a6d417d5c6eca
+  revision: d1e6eb1e07a09053411ebbaa6568684155b8cfa3
   branch: master
   specs:
     refinerycms (3.0.0)
@@ -235,7 +235,7 @@ GEM
       sprockets-rails
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
-    rails-dom-testing (1.0.5)
+    rails-dom-testing (1.0.6)
       activesupport (>= 4.2.0.beta, < 5.0)
       nokogiri (~> 1.6.0)
       rails-deprecated_sanitizer (>= 1.0.1)

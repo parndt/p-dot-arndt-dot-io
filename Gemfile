@@ -2,7 +2,10 @@ source 'https://rubygems.org'
 
 ruby '2.2.1'
 
-gem 'rails_12factor'
+group :production do
+  gem 'rails_12factor'
+end
+
 gem 'puma'
 
 gem 'sass-rails',   '~> 4.0.0'
