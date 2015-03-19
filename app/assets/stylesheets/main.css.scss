@@ -14,6 +14,7 @@ $fancy_font: 'Francois One', sans-serif;
 @mixin page_layout {
   min-width: $min_width * $body_width;
   margin-left: 100% * (1 - $body_width);
+  margin-right: 100% * (1 - $body_width);
 }
 
 @mixin page_text {
