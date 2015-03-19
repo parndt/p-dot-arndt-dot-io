@@ -14,10 +14,6 @@ gem 'compass-rails'
 
 gem 'jquery-rails'
 
-group :production do
-  gem 'newrelic_rpm'
-end
-
 # Refinery CMS
 git 'https://github.com/refinery/refinerycms.git', branch: 'master' do
   gem 'refinerycms'
