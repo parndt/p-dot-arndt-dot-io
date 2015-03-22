@@ -1,4 +1,4 @@
-ActionDispatch::Http::URL.tld_length = 1
+ActionDispatch::Http::URL.tld_length = 2
 
 ActionMailer::Base.smtp_settings = {
   :address        => 'smtp.sendgrid.net',
